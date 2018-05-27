@@ -50,7 +50,7 @@ public class Main{
 			Matcher match;
 			String ime;
 			do {
-				Pattern pattern = Pattern.compile("^[a-zA-Z]+$");
+				Pattern pattern = Pattern.compile("^[a-zA-z]*(\\s)[a-zA-z]*");
 				System.out.print("Ime > ");
 				ime = in.nextLine();
 				match = pattern.matcher(ime); 
@@ -64,6 +64,7 @@ public class Main{
 			do {
 				System.out.print("Prosek > ");			
 				prosek = in.nextFloat();
+				
 				if(prosek <= 0 || prosek > 10) {
 					System.err.println("| " + prosek + " |" + " nije validan, unesite ponovo: ");
 				}
@@ -78,7 +79,7 @@ public class Main{
 	public static void sortStudents(ArrayList<Student> students) {
 		SortingAndSearchinStudents student = new SortingAndSearchinStudents();
 		student.sortingStudents(students);
-		System.out.println("Lista studenata sortiranih po broju indeksa");
+		System.out.println("Lista studenata sortiranih po prosecnoj oceni");
 		printingList(students);
 	}
 	public static void searchStudents(ArrayList<Student> students,int searchKey) {
