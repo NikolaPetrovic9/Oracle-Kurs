@@ -1,7 +1,7 @@
 
 public interface IStudent {
-	public int getBrojIndeksa();
-	public String getIme();
-	public float getProsecnaOcena() ;
+	public int dobaviBrojIndeksa();
+	public String dobaviIme();
+	public float dobaviProsecnuOcenu() ;
 	public String toString();
 }

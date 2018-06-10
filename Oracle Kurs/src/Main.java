@@ -10,7 +10,7 @@ public class Main{
 		float total = 0;
 		int i = 0;
 		while(i < list.size()) {
-			total += list.get(i).getProsecnaOcena();
+			total += list.get(i).dobaviProsecnuOcenu();
 			i++;
 		}
 		return total / i;
@@ -27,7 +27,6 @@ public class Main{
 		System.out.print("Molimo unesite br. studenata > ");
 		int n;
 		n = in.nextInt();
-
 
 		for(int i = 0; i < n; i++) {
 			System.out.println("Student broj #" + (i+1));
@@ -50,7 +49,7 @@ public class Main{
 			Matcher match;
 			String ime;
 			do {
-				Pattern pattern = Pattern.compile("^[a-zA-z]*(\\s)[a-zA-z]*");
+				Pattern pattern = Pattern.compile("^[a-zA-z]*(\\s)[a-zA-z]*"); 
 				System.out.print("Ime > ");
 				ime = in.nextLine();
 				match = pattern.matcher(ime); 
@@ -85,7 +84,7 @@ public class Main{
 	public static void searchStudents(ArrayList<Student> students,int searchKey) {
 		SortingAndSearchinStudents student = new SortingAndSearchinStudents();
 		student.sortingStudents(students);
-		System.out.println(student.toString());
+		//System.out.println(student.toString());
 		
 		Student st = student.binarySearch(students, searchKey);
 		if(st == null) {

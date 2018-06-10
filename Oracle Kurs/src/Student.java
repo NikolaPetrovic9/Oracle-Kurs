@@ -10,15 +10,15 @@ public class Student implements IStudent{
 		this.prosecnaOcena = prosecnaOcena;
 	}
 
-	public int getBrojIndeksa() {
+	public int dobaviBrojIndeksa() {
 		return brojIndeksa;
 	}
 
-	public String getIme() {
+	public String dobaviIme() {
 		return ime;
 	}
 
-	public float getProsecnaOcena() {
+	public float dobaviProsecnuOcenu() {
 		return prosecnaOcena;
 	}
 	

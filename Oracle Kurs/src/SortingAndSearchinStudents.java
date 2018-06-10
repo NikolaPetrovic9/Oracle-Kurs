@@ -6,7 +6,7 @@ public class SortingAndSearchinStudents {
 	public void sortingStudents(ArrayList<Student> list) {
 		for(int i = 0; i < list.size()-1; i++) {
 			for(int j = 0; j <list.size()-i-1; j++) {
-				if(list.get(j).getProsecnaOcena() < list.get(j+1).getProsecnaOcena()) {
+				if(list.get(j).dobaviProsecnuOcenu() < list.get(j+1).dobaviProsecnuOcenu()) {
 					Collections.swap(list, j, j+1);
 				}
 			}
@@ -16,11 +16,11 @@ public class SortingAndSearchinStudents {
 		int low = 0, high = list.size()-1;
 	
 		while (low <= high) {
-			int mid = low + (high-1)/2;
+			int mid = (low + high)/2;
 	     
-	        if(list.get(mid).getBrojIndeksa() == brIndeksa) 
+	        if(list.get(mid).dobaviBrojIndeksa() == brIndeksa) 
 	        	return list.get(mid);
-	       if (list.get(mid).getBrojIndeksa() < brIndeksa) 
+	       if (list.get(mid).dobaviBrojIndeksa() < brIndeksa) 
 	            low = mid + 1;
 	        else  
 	            high = mid - 1;
